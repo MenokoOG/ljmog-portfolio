@@ -1,33 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import images from '../imageData';
 import PropTypes from 'prop-types';
-
-// Custom hook for body overflow
-function useBodyOverflow(overflow) {
-  useEffect(() => {
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = overflow;
-    return () => {
-      document.body.style.overflow = originalOverflow;
-    };
-  }, [overflow]);
-}
-
-// Custom hook for resetting the gallery
-function useResetGallery(resetGallery, setResetGallery, resetActions) {
-  useEffect(() => {
-    if (resetGallery) {
-      resetActions();
-      setResetGallery(false);
-    }
-  }, [resetGallery, setResetGallery, resetActions]);
-}
+import { useBodyOverflow, useResetGallery } from '../hooks/useCustomHooks';
 
 const ImageGallery = ({ resetGallery, setResetGallery }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isZoomed, setIsZoomed] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
-  const imagesPerPage = 6;
+  const imagesPerPage = 3;
 
   // Use custom hooks
   useBodyOverflow(selectedImage ? 'hidden' : 'auto');
@@ -68,7 +48,7 @@ const ImageGallery = ({ resetGallery, setResetGallery }) => {
   const displayedImages = images.slice(startIndex, startIndex + imagesPerPage);
 
   return (
-    <section id="portfolio" /*className="wrapper style3 py-16 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 relative"*/>
+    <section id="portfolio" className="mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
       <div className="container mx-auto">
         <header className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-white">Here’s some digital art stuff I made recently.</h2>
@@ -76,7 +56,7 @@ const ImageGallery = ({ resetGallery, setResetGallery }) => {
         </header>
         <div className="flex flex-wrap">
           {displayedImages.map((src, index) => (
-            <div key={index} className="w-full md:w-1/3 p-4">
+            <div key={index} className="w-full sm:w-1/2 md:w-1/3 p-4">
               <div className="box style2 bg-white p-6 rounded-lg shadow-lg">
                 <div onClick={() => openModal(src)} className="image featured block mb-4 cursor-pointer">
                   <img src={src} alt={`art${startIndex + index + 1}`} className="w-full h-auto rounded-lg" onError={(e) => e.target.src = 'fallback-image.png'} />
@@ -86,17 +66,17 @@ const ImageGallery = ({ resetGallery, setResetGallery }) => {
             </div>
           ))}
         </div>
-        <div className="fixed top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4">
+        <div className="flex justify-between mt-8">
           <button
             onClick={handlePrevPage}
-            className="bg-blue-800 hover:bg-blue-700 text-white py-2 px-4 rounded-full font-mono transition duration-300 transform hover:scale-105 fixed left-4"
+            className="bg-blue-800 hover:bg-blue-700 text-white py-2 px-4 rounded-full font-mono transition duration-300 transform hover:scale-105"
             aria-label="Previous Page"
           >
             &lt;
           </button>
           <button
             onClick={handleNextPage}
-            className="bg-blue-800 hover:bg-blue-700 text-white py-2 px-4 rounded-full font-mono transition duration-300 transform hover:scale-105 fixed right-4"
+            className="bg-blue-800 hover:bg-blue-700 text-white py-2 px-4 rounded-full font-mono transition duration-300 transform hover:scale-105"
             aria-label="Next Page"
           >
             &gt;
