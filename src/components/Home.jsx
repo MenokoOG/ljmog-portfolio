@@ -3,7 +3,7 @@ import jeffImg from '../assets/l_jefferson.png';
 
 const Home = () => {
   return (
-    <main id="top" className="wrapper style1 py-16 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700">
+    <main id="top" /*className="wrapper style1 py-16 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700"*/>
       <div className="container mx-auto flex flex-wrap items-center">
         <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center">
           <img src={jeffImg} alt="Portrait of Lawrence Jefferson" className="w-1/2 h-auto rounded-full shadow-2xl border-4 border-white" />

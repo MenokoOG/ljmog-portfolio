@@ -12,7 +12,7 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <section id="blog" className="wrapper style2 py-16 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700">
+    <section id="blog" /*className="wrapper style2 py-16 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700"*/>
       <div className="container mx-auto">
         <header className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-white">Blog Posts</h2>

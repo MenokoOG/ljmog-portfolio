@@ -5,7 +5,7 @@ import project3 from '../assets/project_screenshots/Screenshot 2024-03-27 163015
 
 const Projects = () => {
   return (
-    <section id="work" className="wrapper style2 py-16 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600">
+    <section id="work" /*className="wrapper style2 py-16 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600"*/>
       <div className="container mx-auto">
         <header className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-white">Web Development Projects</h2>

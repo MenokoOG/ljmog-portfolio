@@ -68,7 +68,7 @@ const ImageGallery = ({ resetGallery, setResetGallery }) => {
   const displayedImages = images.slice(startIndex, startIndex + imagesPerPage);
 
   return (
-    <section id="portfolio" className="wrapper style3 py-16 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 relative">
+    <section id="portfolio" /*className="wrapper style3 py-16 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 relative"*/>
       <div className="container mx-auto">
         <header className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-white">Here’s some digital art stuff I made recently.</h2>
