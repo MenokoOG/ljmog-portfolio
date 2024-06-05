@@ -15,14 +15,14 @@ const Blog = () => {
     <section id="blog" className="mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
       <div className="container mx-auto">
         <header className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-white">Blog Posts</h2>
-          <p className="text-blue-100">Here are some articles I wrote on <a href="https://medium.com/" target="_blank" className="text-yellow-300 hover:underline">Medium</a> blog site.</p>
+          <h2 className="text-3xl font-bold text-yellow-200">Blog Posts</h2>
+          <p className="text-yellow-100">Here are some articles I wrote on <a href="https://medium.com/" target="_blank" className="text-yellow-300 hover:underline">Medium</a> blog site.</p>
         </header>
         <div className="flex flex-wrap justify-center">
           {blogPosts.map((post, index) => (
             <div key={index} className="w-full md:w-1/2 p-4">
-              <div className="box style1 bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href={post.link} target="_blank" className="text-blue-500 hover:underline">{post.title}</a></h3>
+              <div className="mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href={post.link} target="_blank" className="text-yellow-500 hover:underline">{post.title}</a></h3>
               </div>
             </div>
           ))}

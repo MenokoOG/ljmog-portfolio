@@ -51,8 +51,8 @@ const ImageGallery = ({ resetGallery, setResetGallery }) => {
     <section id="portfolio" className="mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
       <div className="container mx-auto">
         <header className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-white">Here’s some digital art stuff I made recently.</h2>
-          <p className="text-blue-100">I used the AIs at NightCafe to create these.</p>
+          <h2 className="text-3xl font-bold text-yellow-200">Here’s some digital art stuff I made recently.</h2>
+          <p className="text-yellow-100">I used the AIs at NightCafe to create these.</p>
         </header>
         <div className="flex flex-wrap">
           {displayedImages.map((src, index) => (
@@ -83,8 +83,8 @@ const ImageGallery = ({ resetGallery, setResetGallery }) => {
           </button>
         </div>
         <footer className="mt-12 text-center">
-          <p className="text-blue-100">Like what you see? Head on over to NightCafe and try it out yourself!</p>
-          <a href="https://creator.nightcafe.studio/" className="inline-block bg-blue-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-300" target="_blank" rel="noopener noreferrer">NightCafe</a>
+          <p className="text-yellow-100">Like what you see? Head on over to NightCafe and try it out yourself!</p>
+          <a href="https://creator.nightcafe.studio/" className="inline-block bg-blue-500 text-yellow-400 px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-300" target="_blank" rel="noopener noreferrer">NightCafe</a>
         </footer>
       </div>
 

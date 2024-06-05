@@ -5,8 +5,8 @@ const Contact = () => {
     <section id="contact" className="mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
       <div className="container mx-auto">
         <header className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-white">Get in touch.</h2>
-          <p className="text-blue-100">Email: jefftkddan@gmail.com</p>
+          <h2 className="text-3xl font-bold text-yellow-200">Get in touch.</h2>
+          <p className="text-yellow-100">Email: jefftkddan@gmail.com</p>
         </header>
         <ul className="social flex justify-center space-x-6">
           <li><a href="https://www.linkedin.com/in/lawrence-jefferson-ii-46497075" className="icon brands fa-linkedin-in text-white text-3xl hover:text-blue-200 transition duration-300" target="_blank" rel="noopener noreferrer"><span className="sr-only">LinkedIn</span></a></li>
