@@ -1,6 +1,6 @@
 import React from 'react';
 import jeffImg from '../assets/l_jefferson.png';
-import './Home.css'; // Make sure to create this CSS file
+import './Home.css'; 
 
 const techStack = [
   { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
@@ -20,10 +20,7 @@ const techStack = [
 
 const Home = () => {
   return (
-    <main
-      id="top"
-      className="bg-cover bg-center min-h-screen"
-    >
+    <main id="top" className="bg-cover bg-center min-h-screen">
       <div className="container mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
         <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center">
           <img
@@ -69,9 +66,7 @@ const Home = () => {
           </a>
           <br />
           <br />
-          <h2 className="text-3xl font-bold mb-4">
-            What I am up to in personal development:
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">What I am up to in personal development:</h2>
           <p className="text-yellow-100 mb-4">
             Gaining more experience in development. Currently working on an
             experience project with Vast AI Gang, learning Nx Dev, Nest.js, and
@@ -83,7 +78,7 @@ const Home = () => {
             rendering.
           </p>
           <div className="tech-stack">
-            <h2 className="text-3xl font-bold mb-4">My Tech Stack:</h2>
+            <h2 className="text-2xl font-bold mb-4 tech-stack-title">My Tech Stack:</h2>
             <ul className="text-yellow-100 swirl-text">
               {techStack.map((tech, index) => (
                 <li key={index} className="tech-item">
