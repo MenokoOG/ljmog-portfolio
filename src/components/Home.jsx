@@ -53,7 +53,7 @@ const Home = () => {
             >
               Menoko OG
             </a>
-            . I am a web developer, Python programming tinkerer, cybersecurity
+            . I am a web developer, junior software tinkerer, cybersecurity
             enthusiast, and web content creator.
           </p>
           <a
