@@ -1,5 +1,5 @@
 import React from 'react';
-import project1 from '../assets/project_screenshots/Screenshot 2024-03-17 115016.png';
+import project1 from '../assets/project_screenshots/Screenshot 2024-06-27 185551.png';
 import project2 from '../assets/project_screenshots/Screenshot 2024-06-01 132640.png';
 import project3 from '../assets/project_screenshots/Screenshot 2024-03-27 163015.png';
 
@@ -18,10 +18,10 @@ const Projects = () => {
               
                 <img src={project1} alt="Archive Explorer" className="w-full h-auto rounded-lg" />
               
-              <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href="https://github.com/MenokoOG/archive-explorer" target="_blank" className="text-blue-500 hover:underline">Archive Explorer</a></h3>
-              <p className="text-gray-700 mb-4">This application was built using HTML, CSS, JavaScript, and React + Vite. This application demonstrates a front-end only application that uses API integration.</p>
-              <p className="text-gray-700 mb-4">This application allows users to check if a webpage has been archived by the Wayback Machine. Simply enter the URL of the webpage you wish to check, and Archive Explorer will tell you if an archived snapshot is available.</p>
-              <h3 className="text-xl font-semibold text-gray-800"><a href="https://menokowebarchiveexplore.netlify.app/" target="_blank" className="text-blue-500 hover:underline">Live Link</a></h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href="https://sci-fi-app-frontend.onrender.com" target="_blank" className="text-blue-500 hover:underline">Python & React Sci-Fi-App</a></h3>
+              <p className="text-gray-700 mb-4">The backend is built with FastAPI and MongoDB Atlas, while the frontend uses React, Vite, TypeScript, and Tailwind CSS.</p>
+              <p className="text-gray-700 mb-4">Welcome to the Sci-Fi Themed CRUD Application! This app lets you manage characters in a sci-fi universe. You can create, read, update, and delete characters.</p>
+              <h3 className="text-xl font-semibold text-gray-800"><a href="https://sci-fi-app-frontend.onrender.com" target="_blank" className="text-blue-500 hover:underline">Live Link</a></h3>
             </div>
           </div>
           <div className="w-full md:w-1/3 p-4">
