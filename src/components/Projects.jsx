@@ -18,7 +18,7 @@ const Projects = () => {
               
                 <img src={project1} alt="Archive Explorer" className="w-full h-auto rounded-lg" />
               
-              <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href="https://sci-fi-app-frontend.onrender.com" target="_blank" className="text-blue-500 hover:underline">Python & React Sci-Fi-App</a></h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href="https://github.com/MenokoOG/sci-fi-app" target="_blank" className="text-blue-500 hover:underline">Python & React Sci-Fi-App</a></h3>
               <p className="text-gray-700 mb-4">The backend is built with FastAPI and MongoDB Atlas, while the frontend uses React, Vite, TypeScript, and Tailwind CSS.</p>
               <p className="text-gray-700 mb-4">Welcome to the Sci-Fi Themed CRUD Application! This app lets you manage characters in a sci-fi universe. You can create, read, update, and delete characters.</p>
               <h3 className="text-xl font-semibold text-gray-800"><a href="https://sci-fi-app-frontend.onrender.com" target="_blank" className="text-blue-500 hover:underline">Live Link</a></h3>
