@@ -68,8 +68,7 @@ const Home = () => {
           <br />
           <h2 className="text-3xl font-bold mb-4">What I am up to in personal development:</h2>
           <p className="text-yellow-100 mb-4">
-            Gaining more experience in development. Currently working on an
-            experience project with Vast AI Gang, learning Nx Dev, Nest.js, and
+             Currently working on an awesome project with Vast AI Gang using Nx Dev, Nest.js, React, Redux, Firebase, Firestore,  and
             Typescript.
           </p>
           <p className="text-yellow-100">
