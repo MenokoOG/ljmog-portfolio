@@ -21,6 +21,7 @@ const Projects = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href="https://github.com/MenokoOG/sci-fi-app" target="_blank" className="text-blue-500 hover:underline">Python & React Sci-Fi-App</a></h3>
               <p className="text-gray-700 mb-4">The backend is built with FastAPI and MongoDB Atlas, while the frontend uses React, Vite, TypeScript, and Tailwind CSS.</p>
               <p className="text-gray-700 mb-4">Welcome to the Sci-Fi Themed CRUD Application! This app lets you manage characters in a sci-fi universe. You can create, read, update, and delete characters.</p>
+              <p className="text-red-700 mb-4">Note: Sorry !!! This takes about two minutes to spin up on free tier of render deployment.</p>
               <h3 className="text-xl font-semibold text-gray-800"><a href="https://sci-fi-app-frontend.onrender.com" target="_blank" className="text-blue-500 hover:underline">Live Link</a></h3>
             </div>
           </div>
@@ -43,6 +44,7 @@ const Projects = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href="https://github.com/MenokoOG/mern_stack_help_2" target="_blank" className="text-blue-500 hover:underline">MERN Stack Helper 2.0</a></h3>
               <p className="text-gray-700 mb-4">This application is a full stack application with authentication. It uses HTML, CSS, JavaScript, MongoDB, Express.js, React + Vite, and Node.js. This application demonstrates complex routing, multiple theme options, and user-specific CRUD operations with custom API.</p>
               <p className="text-gray-700 mb-4">MERN Stack Helper, our primary aim is to support fellow students in their journey through the Full Stack Web Development course. We understand the challenges of mastering multiple technologies, which is why we've developed this application as a reference and helping tool.</p>
+              <p className="text-red-700 mb-4">Note: Sorry !!! This takes about two minutes to spin up on free tier of render deployment.</p>
               <h3 className="text-xl font-semibold text-gray-800"><a href="https://mern-stack-helper-2-0.onrender.com" target="_blank" className="text-blue-500 hover:underline">Live Link</a></h3>
             </div>
           </div>
