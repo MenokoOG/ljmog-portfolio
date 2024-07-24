@@ -3,6 +3,11 @@ import ProjectCard from './ProjectCard';
 import project1 from '../assets/project_screenshots/Screenshot 2024-06-27 185551.png';
 import project2 from '../assets/project_screenshots/Screenshot 2024-06-01 132640.png';
 import project3 from '../assets/project_screenshots/Screenshot 2024-03-27 163015.png';
+import project4 from "../assets/project_screenshots/qr_code.png"
+import project5 from "../assets/project_screenshots/fizzBuzz.png"
+import project6 from "../assets/project_screenshots/nx_todo.png"
+import project7 from "../assets/project_screenshots/random_dog.png"
+import project8 from "../assets/project_screenshots/grocery.png"
 import placeholder from '../assets/project_screenshots/placeholder.png';
 
 const Projects = () => {
@@ -26,7 +31,7 @@ const Projects = () => {
           <ProjectCard
             image={project2}
             title="LuxGirl OG - Original Geek! Website"
-            description="This application was built using React + Vite, Tailwind CSS, Firebase/Firestore, some custom JSX, and API integration."
+            description="This application was built using React + Vite, Tailwind CSS, Firebase/Firestore, some custom hooks, custom utility functions, and API integration."
             liveLink="https://luxgirlog.netlify.app/"
           />
           <ProjectCard
@@ -38,33 +43,33 @@ const Projects = () => {
             repoLink="https://github.com/MenokoOG/mern_stack_help_2"
           />
           <ProjectCard
-            image={placeholder}
+            image={project4}
             title="QR Code Generator React"
-            description="A React App that generates a QR Code from an input of a web address."
+            description="A React, Vite, and Jsx App that generates a QR Code from an input of a web address."
             repoLink="https://github.com/MenokoOG/qr-code-react-app"
           />
           <ProjectCard
-            image={placeholder}
+            image={project5}
             title="FizzBuzz React"
             description="This is a fun and interactive FizzBuzz game built with React and Tailwind CSS. The application allows users to select a range using a slider or input a number directly to generate the FizzBuzz sequence. The cards representing the sequence are styled with cool effects and animations to make the experience more engaging."
             repoLink="https://github.com/MenokoOG/fizzbuzz-react"
           />
           <ProjectCard
-            image={placeholder}
+            image={project6}
             title="ToDo App in Nx Dev Monorepo"
             description="Full Stack todo CRUD app built in Nx Dev monorepo, Nest.js, React, Typescript, and MongoDB."
             repoLink="https://github.com/MenokoOG/todo-app"
           />
           <ProjectCard
-            image={placeholder}
+            image={project7}
             title="JavaScript Back-end and Python Front-end"
             description="This is a simple project that combines a JavaScript backend using Express and a Python frontend using Flask. It fetches random dog images from the Dog CEO API and displays them with a nice Tailwind CSS style."
             repoLink="https://github.com/MenokoOG/js-py"
           />
           <ProjectCard
-            image={placeholder}
+            image={project8}
             title="Grocery List App"
-            description="Grocery App built for daughter using React and Firebase."
+            description="Grocery App built for daughter using React and Firebase. React handles front-end and firebase handles back-end requirements. It has full CRUD operations and is an alternative to a full stack application with programmed back-end."
             repoLink="https://github.com/MenokoOG/luxgirl-grocery-app"
           />
         </div>
