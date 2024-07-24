@@ -1,56 +1,75 @@
 import React from 'react';
+import ProjectCard from './ProjectCard';
 import project1 from '../assets/project_screenshots/Screenshot 2024-06-27 185551.png';
 import project2 from '../assets/project_screenshots/Screenshot 2024-06-01 132640.png';
 import project3 from '../assets/project_screenshots/Screenshot 2024-03-27 163015.png';
+import placeholder from '../assets/project_screenshots/placeholder.png';
 
 const Projects = () => {
   return (
-    <section id="work" className="mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
-      <div className="container mx-auto">
+    <section id="work" className="mx-auto py-12 g-opacity-70 bg-black p-8 rounded-lg">
+      <div className="container mx-auto px-8">
         <header className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-yellow-200">Web Development Projects</h2>
-          <p className="text-yellow-100">Here are a few projects I completed in my full stack JavaScript web development course at <a href="https://vschool.io/courses/development/" target="_blank" className="text-yellow-300 hover:underline">V School</a></p>
-          <p className="text-yellow-100">I do work on other more interesting personal projects and they will have to be asked about as they are not public projects. Check back often though as I will put more interesting public ones here as I develop them; other than my school projects that have already been built by every other developer out there in the industry.</p>
+          <h2 className="text-4xl font-bold text-yellow-200">Web Development Projects</h2>
+          <p className="text-yellow-100 mt-4">Here some web sites and web applications I have developed since completing my full stack JavaScript web development course at <a href="https://vschool.io/courses/development/" target="_blank" rel="noopener noreferrer" className="text-yellow-300 hover:underline">V School</a></p>
+          <p className="text-yellow-100 mt-2"> Check back often for updates.</p>
         </header>
         <div className="flex flex-wrap justify-center">
-          <div className="w-full md:w-1/3 p-4">
-            <div className="box style1 bg-white p-6 rounded-lg shadow-lg">
-              
-                <img src={project1} alt="Archive Explorer" className="w-full h-auto rounded-lg" />
-              
-              <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href="https://github.com/MenokoOG/sci-fi-app" target="_blank" className="text-blue-500 hover:underline">Python & React Sci-Fi-App</a></h3>
-              <p className="text-gray-700 mb-4">The backend is built with FastAPI and MongoDB Atlas, while the frontend uses React, Vite, TypeScript, and Tailwind CSS.</p>
-              <p className="text-gray-700 mb-4">Welcome to the Sci-Fi Themed CRUD Application! This app lets you manage characters in a sci-fi universe. You can create, read, update, and delete characters.</p>
-              <p className="text-red-700 mb-4">Note: Sorry !!! This takes about two minutes to spin up on free tier of render deployment.</p>
-              <h3 className="text-xl font-semibold text-gray-800"><a href="https://sci-fi-app-frontend.onrender.com" target="_blank" className="text-blue-500 hover:underline">Live Link</a></h3>
-            </div>
-          </div>
-          <div className="w-full md:w-1/3 p-4">
-            <div className="box style1 bg-white p-6 rounded-lg shadow-lg">
-              
-                <img src={project2} alt="LuxGirl OG Website" className="w-full h-auto rounded-lg" />
-              
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">LuxGirl OG - Original Geek! Website</h3>
-              <p className="text-gray-700 mb-4">This application was built using React + Vite, tailwind css, firebase/firestore, some custom JSX, and API integration. </p>
-              <p className="text-gray-700 mb-4"></p>
-              <h3 className="text-xl font-semibold text-gray-800"><a href="https://luxgirlog.netlify.app/" target="_blank" className="text-blue-500 hover:underline">Live Link</a></h3>
-            </div>
-          </div>
-          <div className="w-full md:w-1/3 p-4">
-            <div className="box style1 bg-white p-6 rounded-lg shadow-lg">
-              
-                <img src={project3} alt="MERN Stack Helper 2.0" className="w-full h-auto rounded-lg" />
-              
-              <h3 className="text-xl font-semibold text-gray-800 mb-4"><a href="https://github.com/MenokoOG/mern_stack_help_2" target="_blank" className="text-blue-500 hover:underline">MERN Stack Helper 2.0</a></h3>
-              <p className="text-gray-700 mb-4">This application is a full stack application with authentication. It uses HTML, CSS, JavaScript, MongoDB, Express.js, React + Vite, and Node.js. This application demonstrates complex routing, multiple theme options, and user-specific CRUD operations with custom API.</p>
-              <p className="text-gray-700 mb-4">MERN Stack Helper, our primary aim is to support fellow students in their journey through the Full Stack Web Development course. We understand the challenges of mastering multiple technologies, which is why we've developed this application as a reference and helping tool.</p>
-              <p className="text-red-700 mb-4">Note: Sorry !!! This takes about two minutes to spin up on free tier of render deployment.</p>
-              <h3 className="text-xl font-semibold text-gray-800"><a href="https://mern-stack-helper-2-0.onrender.com" target="_blank" className="text-blue-500 hover:underline">Live Link</a></h3>
-            </div>
-          </div>
+          <ProjectCard
+            image={project1}
+            title="Python & React Sci-Fi-App"
+            description="The backend is built with FastAPI and MongoDB Atlas, while the frontend uses React, Vite, TypeScript, and Tailwind CSS. Welcome to the Sci-Fi Themed CRUD Application! This app lets you manage characters in a sci-fi universe. You can create, read, update, and delete characters."
+            note="Note: Sorry !!! This takes about two minutes to spin up on free tier of render deployment."
+            liveLink="https://sci-fi-app-frontend.onrender.com"
+            repoLink="https://github.com/MenokoOG/sci-fi-app"
+          />
+          <ProjectCard
+            image={project2}
+            title="LuxGirl OG - Original Geek! Website"
+            description="This application was built using React + Vite, Tailwind CSS, Firebase/Firestore, some custom JSX, and API integration."
+            liveLink="https://luxgirlog.netlify.app/"
+          />
+          <ProjectCard
+            image={project3}
+            title="MERN Stack Helper 2.0"
+            description="This application is a full stack application with authentication. It uses HTML, CSS, JavaScript, MongoDB, Express.js, React + Vite, and Node.js. This application demonstrates complex routing, multiple theme options, and user-specific CRUD operations with custom API. MERN Stack Helper, our primary aim is to support fellow students in their journey through the Full Stack Web Development course."
+            note="Note: Sorry !!! This takes about two minutes to spin up on free tier of render deployment."
+            liveLink="https://mern-stack-helper-2-0.onrender.com"
+            repoLink="https://github.com/MenokoOG/mern_stack_help_2"
+          />
+          <ProjectCard
+            image={placeholder}
+            title="QR Code Generator React"
+            description="A React App that generates a QR Code from an input of a web address."
+            repoLink="https://github.com/MenokoOG/qr-code-react-app"
+          />
+          <ProjectCard
+            image={placeholder}
+            title="FizzBuzz React"
+            description="This is a fun and interactive FizzBuzz game built with React and Tailwind CSS. The application allows users to select a range using a slider or input a number directly to generate the FizzBuzz sequence. The cards representing the sequence are styled with cool effects and animations to make the experience more engaging."
+            repoLink="https://github.com/MenokoOG/fizzbuzz-react"
+          />
+          <ProjectCard
+            image={placeholder}
+            title="ToDo App in Nx Dev Monorepo"
+            description="Full Stack todo CRUD app built in Nx Dev monorepo, Nest.js, React, Typescript, and MongoDB."
+            repoLink="https://github.com/MenokoOG/todo-app"
+          />
+          <ProjectCard
+            image={placeholder}
+            title="JavaScript Back-end and Python Front-end"
+            description="This is a simple project that combines a JavaScript backend using Express and a Python frontend using Flask. It fetches random dog images from the Dog CEO API and displays them with a nice Tailwind CSS style."
+            repoLink="https://github.com/MenokoOG/js-py"
+          />
+          <ProjectCard
+            image={placeholder}
+            title="Grocery List App"
+            description="Grocery App built for daughter using React and Firebase."
+            repoLink="https://github.com/MenokoOG/luxgirl-grocery-app"
+          />
         </div>
         <footer className="mt-12 text-center">
-          <a href="https://menokoog.github.io/Past-Web-Projects-for-Clients/" className="inline-block bg-blue-500 text-yellow-400 px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-300" target="_blank">See some of my 2010-2013 Web Projects</a>
+          <a href="https://menokoog.github.io/Past-Web-Projects-for-Clients/" className="inline-block bg-blue-500 text-yellow-400 px-6 py-3 rounded-full shadow-lg hover:bg-blue-600 transition duration-300" target="_blank" rel="noopener noreferrer">See some of my 2010-2013 Web Projects</a>
         </footer>
       </div>
     </section>

@@ -8,6 +8,7 @@ const techStack = [
   { name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
   { name: 'Python', url: 'https://www.python.org/doc/' },
   { name: 'React', url: 'https://reactjs.org/docs/getting-started.html' },
+  { name: 'Redux', url: 'https://redux.js.org/introduction/getting-started' },
   { name: 'Node', url: 'https://nodejs.org/en/docs/' },
   { name: 'Express', url: 'https://expressjs.com/en/starter/installing.html' },
   { name: 'Nx Dev', url: 'https://nx.dev/latest/react/getting-started/intro' },
@@ -15,8 +16,12 @@ const techStack = [
   { name: 'TypeScript', url: 'https://www.typescriptlang.org/docs/' },
   { name: 'MongoDB', url: 'https://docs.mongodb.com/' },
   { name: 'Firebase', url: 'https://firebase.google.com/docs' },
-  { name: 'Vite', url: 'https://vitejs.dev/guide/' }
+  { name: 'Vite', url: 'https://vitejs.dev/guide/' },
+  { name: 'Django', url: 'https://docs.djangoproject.com/en/stable/' },
+  { name: 'Python FastAPI', url: 'https://fastapi.tiangolo.com/' },
+  { name: 'Flask', url: 'https://flask.palletsprojects.com/en/latest/' }
 ];
+
 
 const Home = () => {
   return (
