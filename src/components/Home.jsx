@@ -71,12 +71,14 @@ const Home = () => {
           </a>
           <br />
           <br />
-          <h2 className="text-3xl font-bold mb-4">What I am up to in personal development:</h2>
+          <h2 className="text-3xl font-bold mb-4">What I am up to:</h2>
           <p className="text-yellow-100 mb-4">
-             Currently working on an awesome project with Vast AI Gang using Nx Dev, Nest.js, React, Redux, Firebase, Firestore,  and
-            Typescript.
+             Just finished working on an awesome project with Vast AI Gang using Nx Dev, Nest.js, React, Redux, Firebase, Firestore,  and
+            Typescript. 
           </p>
+          <p className="text-yellow-100">Joining project with op-veteran to help build an event application.</p>
           <p className="text-yellow-100">
+            <br/>
             My site is built using React + Vite, Tailwind CSS, custom hooks, and
             custom JavaScript for auto-populating the imageData file for
             rendering.

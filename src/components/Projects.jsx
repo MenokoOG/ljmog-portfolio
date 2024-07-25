@@ -8,7 +8,7 @@ import project5 from "../assets/project_screenshots/fizzBuzz.png"
 import project6 from "../assets/project_screenshots/nx_todo.png"
 import project7 from "../assets/project_screenshots/random_dog.png"
 import project8 from "../assets/project_screenshots/grocery.png"
-import placeholder from '../assets/project_screenshots/placeholder.png';
+// import placeholder from '../assets/project_screenshots/placeholder.png';
 
 const Projects = () => {
   return (
