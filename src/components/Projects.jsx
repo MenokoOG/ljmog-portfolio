@@ -8,6 +8,7 @@ import project5 from "../assets/project_screenshots/fizzBuzz.png"
 import project6 from "../assets/project_screenshots/nx_todo.png"
 import project7 from "../assets/project_screenshots/random_dog.png"
 import project8 from "../assets/project_screenshots/grocery.png"
+import project9 from "../assets/project_screenshots/vastaigang.png"
 // import placeholder from '../assets/project_screenshots/placeholder.png';
 
 const Projects = () => {
@@ -20,6 +21,19 @@ const Projects = () => {
           <p className="text-yellow-100 mt-2"> Check back often for updates.</p>
         </header>
         <div className="flex flex-wrap justify-center">
+          <ProjectCard
+            image={project9}
+            title="Vast AI Gang Dashboard Application"
+            description={`As part of an Agile team, I contributed to developing a dashboard application for hosts renting out their machines on Vast AI. My responsibilities included creating features, refactoring code, and ensuring seamless integration between the frontend and backend. The application provided a user-friendly interface for monitoring machine metrics, configuring notification settings, and generating reports.
+              \nProject Duration: April 25, 2024 - July 25, 2024
+              \nTeam: Two Project Managers, Lead Software Engineer, Sprint Team (Lawrence Jefferson II aka Menoko OG, another developer)
+              \nTech Stack: Frontend: React, TypeScript, Redux, Tailwind CSS; Backend: Nest.js; Database: Firebase, Firestore; Tools: Nx Dev Monorepo, Axios, Chart.js, react-chartjs-2
+              \nKey Contributions:
+              \n1. Notification Settings Component: Developed a feature-rich React component allowing users to configure their notification preferences, integrated with Redux for state management, and styled using Tailwind CSS.
+              \n2. Logout Functionality: Implemented logout functionality across desktop and mobile views, ensuring a smooth and secure user experience.
+              \n3. Reports Component Enhancements: Improved the functionality, usability, and visual appeal of the reports component, including data filtering, export options, and dynamic data display.
+              \n4. Dashboard Component: Created an interactive dashboard to display and compare machine metrics using various chart types. Utilized a custom hook for asynchronous data fetching and implemented a modal for better visualization.`}
+          />
           <ProjectCard
             image={project1}
             title="Python & React Sci-Fi-App"

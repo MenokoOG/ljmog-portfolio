@@ -3,6 +3,7 @@ import Modal from './Modal';
 
 const ProjectCard = ({ image, title, description, note, liveLink, repoLink }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -10,6 +11,10 @@ const ProjectCard = ({ image, title, description, note, liveLink, repoLink }) =>
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const toggleCollapse = () => {
+    setIsCollapsed(!isCollapsed);
   };
 
   return (
@@ -21,7 +26,12 @@ const ProjectCard = ({ image, title, description, note, liveLink, repoLink }) =>
         <h3 className="text-xl font-semibold text-gray-800 mb-2">
           <a href={repoLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">{title}</a>
         </h3>
-        <p className="text-gray-700 mb-4">{description}</p>
+        <p className="text-gray-700 mb-4">
+          {isCollapsed ? `${description.substring(0, 100)}...` : description}
+          <button onClick={toggleCollapse} className="text-blue-500 hover:underline ml-2">
+            {isCollapsed ? 'Read More' : 'Show Less'}
+          </button>
+        </p>
         {note && <p className="text-red-700 mb-4">{note}</p>}
         {liveLink && (
           <h3 className="text-lg font-medium text-gray-800">
