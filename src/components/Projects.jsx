@@ -13,7 +13,7 @@ import project9 from "../assets/project_screenshots/vastaigang.png"
 
 const Projects = () => {
   return (
-    <section id="work" className="mx-auto py-12 g-opacity-70 bg-black p-8 rounded-lg">
+    <section id="work" className="container mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
       <div className="container mx-auto px-8">
         <header className="mb-12 text-center">
           <h2 className="text-4xl font-bold text-yellow-200">Web Development Projects</h2>
