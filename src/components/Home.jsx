@@ -1,32 +1,37 @@
 import React from 'react';
 import jeffImg from '../assets/l_jefferson.png';
+import {  FaTools } from 'react-icons/fa'; // Import an icon for the resume button and a generic one
+import { DiJavascript1, DiPython } from 'react-icons/di';
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaFire, FaPython } from 'react-icons/fa';
+import { SiRedux, SiNestjs, SiMongodb, SiTypescript, SiExpress, SiNx } from 'react-icons/si';
+import { IconContext } from 'react-icons'; // Import IconContext from react-icons
+
 import './Home.css'; 
 
 const techStack = [
-  { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
-  { name: 'HTML', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
-  { name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
-  { name: 'Python', url: 'https://www.python.org/doc/' },
-  { name: 'React', url: 'https://reactjs.org/docs/getting-started.html' },
-  { name: 'Redux', url: 'https://redux.js.org/introduction/getting-started' },
-  { name: 'Node', url: 'https://nodejs.org/en/docs/' },
-  { name: 'Express', url: 'https://expressjs.com/en/starter/installing.html' },
-  { name: 'Nx Dev', url: 'https://nx.dev/latest/react/getting-started/intro' },
-  { name: 'Nest.js', url: 'https://nestjs.com/' },
-  { name: 'TypeScript', url: 'https://www.typescriptlang.org/docs/' },
-  { name: 'MongoDB', url: 'https://docs.mongodb.com/' },
-  { name: 'Firebase', url: 'https://firebase.google.com/docs' },
-  { name: 'Vite', url: 'https://vitejs.dev/guide/' },
-  { name: 'Django', url: 'https://docs.djangoproject.com/en/stable/' },
-  { name: 'Python FastAPI', url: 'https://fastapi.tiangolo.com/' },
-  { name: 'Flask', url: 'https://flask.palletsprojects.com/en/latest/' }
+  { name: 'JavaScript', url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', icon: <DiJavascript1 /> },
+  { name: 'HTML', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML', icon: <FaHtml5 /> },
+  { name: 'CSS', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS', icon: <FaCss3Alt /> },
+  { name: 'Python', url: 'https://www.python.org/doc/', icon: <DiPython /> },
+  { name: 'React', url: 'https://reactjs.org/docs/getting-started.html', icon: <FaReact /> },
+  { name: 'Redux', url: 'https://redux.js.org/introduction/getting-started', icon: <SiRedux /> },
+  { name: 'Node', url: 'https://nodejs.org/en/docs/', icon: <FaNodeJs /> },
+  { name: 'Express', url: 'https://expressjs.com/en/starter/installing.html', icon: <SiExpress /> },
+  { name: 'Nx Dev', url: 'https://nx.dev/latest/react/getting-started/intro', icon: <SiNx /> },
+  { name: 'Nest.js', url: 'https://nestjs.com/', icon: <SiNestjs /> },
+  { name: 'TypeScript', url: 'https://www.typescriptlang.org/docs/', icon: <SiTypescript /> },
+  { name: 'MongoDB', url: 'https://docs.mongodb.com/', icon: <SiMongodb /> },
+  { name: 'Firebase', url: 'https://firebase.google.com/docs', icon: <FaFire /> },
+  { name: 'Vite', url: 'https://vitejs.dev/guide/', icon: <FaTools /> },  // Using a generic tool icon for Vite
+  { name: 'Django', url: 'https://docs.djangoproject.com/en/stable/', icon: <FaPython /> },
+  { name: 'Python FastAPI', url: 'https://fastapi.tiangolo.com/', icon: <FaPython /> },
+  { name: 'Flask', url: 'https://flask.palletsprojects.com/en/latest/', icon: <FaPython /> }
 ];
-
 
 const Home = () => {
   return (
-    <main id="top" className="bg-cover bg-center min-h-screen">
-      <div className="container mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
+    <main id="top" className="bg-cover bg-center min-h-screen text-gray-200">
+      <div className="container mx-auto flex flex-wrap items-center bg-opacity-90 bg-gray-900 p-8 rounded-lg">
         <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center">
           <img
             src={jeffImg}
@@ -34,7 +39,7 @@ const Home = () => {
             className="w-1/2 h-auto rounded-full shadow-2xl border-4 border-white"
           />
         </div>
-        <div className="w-full md:w-2/3 px-4 text-white">
+        <div className="w-full md:w-2/3 px-4">
           <h1 className="text-5xl font-bold mb-4">
             Hi! I'm <strong className="text-yellow-300">Menoko OG</strong>{' '}
             <small className="text-yellow-200">- Original Geek!</small>
@@ -58,47 +63,40 @@ const Home = () => {
             >
               Menoko OG
             </a>
-            . I am a web developer, junior software tinkerer, cybersecurity
+            . I am a full stack web developer, junior software tinkerer, cybersecurity
             enthusiast, and web content creator.
           </p>
-          <a
-            href="/resume/dev_general_resume_jefferson.pdf"
-            className="inline-block bg-yellow-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            My Resume
-          </a>
+          
           <br />
           <br />
           <h2 className="text-3xl font-bold mb-4">What I am up to:</h2>
           <p className="text-yellow-100 mb-4">
-             Just finished working on an awesome project with Vast AI Gang using Nx Dev, Nest.js, React, Redux, Firebase, Firestore,  and
-            Typescript. 
+            Just finished working on an awesome project with Vast AI Gang using Nx Dev, Nest.js, React, Redux, Firebase, Firestore, and
+            Typescript.
           </p>
-          <p className="text-yellow-100">Joining project with op-veteran to help build an event application.</p>
-          <p className="text-yellow-100">
-            <br/>
-            My site is built using React + Vite, Tailwind CSS, custom hooks, and
-            custom JavaScript for auto-populating the imageData file for
-            rendering.
+          
+          <p className="text-yellow-100 mt-4">
+            Working on some more projects !!!!
           </p>
-          <div className="tech-stack">
+          <div className="tech-stack mt-8">
             <h2 className="text-2xl font-bold mb-4 tech-stack-title">My Tech Stack:</h2>
-            <ul className="text-yellow-100 swirl-text">
-              {techStack.map((tech, index) => (
-                <li key={index} className="tech-item">
-                  <a
-                    href={tech.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    {tech.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <IconContext.Provider value={{ size: '2rem', color: '#FFEB3B' }}>
+              <ul className="flex flex-wrap justify-center">
+                {techStack.map((tech, index) => (
+                  <li key={index} className="tech-item mx-4 mb-4 flex flex-col items-center">
+                    <a
+                      href={tech.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {tech.icon}
+                    </a>
+                    <span className="mt-2 text-sm">{tech.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </IconContext.Provider>
           </div>
         </div>
       </div>
