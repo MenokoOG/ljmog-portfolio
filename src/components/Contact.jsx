@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFileDownload } from 'react-icons/fa'; 
+import { FaFileDownload } from 'react-icons/fa';
 
 const Contact = () => {
   return (
@@ -9,7 +9,7 @@ const Contact = () => {
           <h2 className="text-3xl font-bold text-yellow-200">Get in touch.</h2>
           <p className="text-yellow-100">Email: jefftkddan@gmail.com</p>
           <a
-            href="/resume/dev_general_resume_jefferson.pdf"
+            href="/resume/dev_resume_jeffeson_92024.pdf"
             className="inline-block bg-yellow-500 text-white px-6 py-3 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300 flex items-center"
             target="_blank"
             rel="noopener noreferrer"
