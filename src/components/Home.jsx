@@ -31,7 +31,7 @@ const techStack = [
 const Home = () => {
   return (
     <main id="top" className="bg-cover bg-center min-h-screen text-gray-200">
-      <div className="container mx-auto flex flex-wrap items-center bg-opacity-90 bg-gray-900 p-8 rounded-lg">
+      <div className="mx-auto flex flex-wrap items-center bg-opacity-70 bg-black p-8 rounded-lg">
         <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center">
           <img
             src={jeffImg}
@@ -43,7 +43,7 @@ const Home = () => {
           <h1 className="text-5xl font-bold mb-4">
             Hi! I'm <strong className="text-yellow-300">Lawrence Jefferson</strong>{' '}
             <br />
-            <small className="text-yellow-200">Web Developer / JavaScript Fullstack and Python Enthusiast</small>
+            <small className="text-yellow-200">Web Developer </small>
           </h1>
           <p className="text-yellow-100 mb-6">
             I am{' '}
@@ -63,9 +63,8 @@ const Home = () => {
               className="text-yellow-300 hover:underline"
             >
               Menoko OG- Original Geek !
-            </a>
-            . I am a full stack web developer, software tinkerer, cybersecurity
-            enthusiast, and web content creator.
+            </a> {''}
+            JavaScript Fullstack and Python Enthusiast !
           </p>
 
           <br />

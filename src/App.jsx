@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 // import ImageGallery from './components/ImageGallery';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
+
 import backgroundImage from '/dark-pearly-textured.png'; // Adjust the path as necessary
 
 function App() {
