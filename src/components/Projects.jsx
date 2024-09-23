@@ -36,7 +36,7 @@ const Projects = () => {
           />
           <ProjectCard
             image={project1}
-            title="Python & React Sci-Fi-App"
+            title="Python & React App"
             description="The backend is built with FastAPI and MongoDB Atlas, while the frontend uses React, Vite, TypeScript, and Tailwind CSS. Welcome to the Sci-Fi Themed CRUD Application! This app lets you manage characters in a sci-fi universe. You can create, read, update, and delete characters."
             note="Note: Sorry !!! This takes about two minutes to spin up on free tier of render deployment."
             liveLink="https://sci-fi-app-frontend.onrender.com"
