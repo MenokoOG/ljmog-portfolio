@@ -7,7 +7,7 @@ import Projects from './components/Projects';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
 
-import backgroundImage from '/dark-pearly-textured.png'; // Adjust the path as necessary
+import backgroundImage from '/dark-pearly-textured.jpg'; // Adjust the path as necessary
 
 function App() {
   const [resetGallery, setResetGallery] = useState(false);
