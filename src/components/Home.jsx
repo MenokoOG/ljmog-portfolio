@@ -2,8 +2,8 @@ import React from 'react';
 import jeffImg from '../assets/l_jefferson.png';
 import { FaTools } from 'react-icons/fa'; // Import an icon for the resume button and a generic one
 import { DiJavascript1, DiPython } from 'react-icons/di';
-import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaFire, FaPython } from 'react-icons/fa';
-import { SiRedux, SiNestjs, SiMongodb, SiTypescript, SiExpress, SiNx } from 'react-icons/si';
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaFire, FaPython, FaDatabase } from 'react-icons/fa';
+import { SiRedux, SiExpress, SiNx, SiNestjs, SiTypescript, SiMongodb, SiGraphql } from 'react-icons/si';
 import { IconContext } from 'react-icons'; // Import IconContext from react-icons
 
 import './Home.css';
@@ -22,10 +22,12 @@ const techStack = [
   { name: 'TypeScript', url: 'https://www.typescriptlang.org/docs/', icon: <SiTypescript /> },
   { name: 'MongoDB', url: 'https://docs.mongodb.com/', icon: <SiMongodb /> },
   { name: 'Firebase', url: 'https://firebase.google.com/docs', icon: <FaFire /> },
-  { name: 'Vite', url: 'https://vitejs.dev/guide/', icon: <FaTools /> },  // Using a generic tool icon for Vite
+  { name: 'Vite', url: 'https://vitejs.dev/guide/', icon: <FaTools /> },
   { name: 'Django', url: 'https://docs.djangoproject.com/en/stable/', icon: <FaPython /> },
   { name: 'Python FastAPI', url: 'https://fastapi.tiangolo.com/', icon: <FaPython /> },
-  { name: 'Flask', url: 'https://flask.palletsprojects.com/en/latest/', icon: <FaPython /> }
+  { name: 'Flask', url: 'https://flask.palletsprojects.com/en/latest/', icon: <FaPython /> },
+  { name: 'GraphQL', url: 'https://graphql.org/learn/', icon: <SiGraphql /> },
+  { name: 'SQL', url: 'https://www.w3schools.com/sql/', icon: <FaDatabase /> }
 ];
 
 const Home = () => {
@@ -43,7 +45,7 @@ const Home = () => {
           <h1 className="text-5xl font-bold mb-4">
             Hi! I'm <strong className="text-yellow-300">Lawrence Jefferson</strong>{' '}
             <br />
-            <small className="text-yellow-200">Web Developer </small>
+            <small className="text-yellow-200">Chief Technology Officer of GunKustom.com </small>
           </h1>
           <p className="text-yellow-100 mb-6">
             I am{' '}
@@ -62,16 +64,16 @@ const Home = () => {
               rel="noopener noreferrer"
               className="text-yellow-300 hover:underline"
             >
-              Menoko OG- Original Geek !
+              M3n0koOg - Original Geek !
             </a> {''}
-            JavaScript Fullstack and Python Enthusiast !
+            JavaScript and Python Fullstack Enthusiast !
           </p>
 
           <br />
           <br />
           <h2 className="text-3xl font-bold mb-4">What I am up to:</h2>
           <p className="text-yellow-100 mb-4">
-            Working on a few projects, learning new technologies, and creating content.
+            Strategically leading the technology needs of GunKustom, coding a few projects and learning new technologies.
           </p>
 
 
