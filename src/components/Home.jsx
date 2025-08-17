@@ -1,10 +1,10 @@
 import React from 'react';
-import jeffImg from '../assets/l_jefferson.png';
-import { FaTools } from 'react-icons/fa'; // Import an icon for the resume button and a generic one
+import jeffImg from '../assets/LJ-river-Hells-Canyon.jpg';
+import { FaTools } from 'react-icons/fa';
 import { DiJavascript1, DiPython } from 'react-icons/di';
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaFire, FaPython, FaDatabase } from 'react-icons/fa';
 import { SiRedux, SiExpress, SiNx, SiNestjs, SiTypescript, SiMongodb, SiGraphql } from 'react-icons/si';
-import { IconContext } from 'react-icons'; // Import IconContext from react-icons
+import { IconContext } from 'react-icons';
 
 import './Home.css';
 
@@ -27,7 +27,7 @@ const techStack = [
   { name: 'Python FastAPI', url: 'https://fastapi.tiangolo.com/', icon: <FaPython /> },
   { name: 'Flask', url: 'https://flask.palletsprojects.com/en/latest/', icon: <FaPython /> },
   { name: 'GraphQL', url: 'https://graphql.org/learn/', icon: <SiGraphql /> },
-  { name: 'SQL', url: 'https://www.w3schools.com/sql/', icon: <FaDatabase /> }
+  { name: 'SQL', url: 'https://www.w3schools.com/sql/', icon: <FaDatabase /> },
 ];
 
 const Home = () => {
@@ -37,49 +37,41 @@ const Home = () => {
         <div className="w-full md:w-1/3 mb-8 md:mb-0 flex justify-center">
           <img
             src={jeffImg}
-            alt="Portrait of Lawrence Jefferson"
+            alt="Lawrence Jefferson II at Hells Canyon"
             className="w-1/2 h-auto rounded-full shadow-2xl border-4 border-white"
+            loading="lazy"
           />
         </div>
+
         <div className="w-full md:w-2/3 px-4">
-          <h1 className="text-5xl font-bold mb-4">
-            Hi! I'm <strong className="text-yellow-300">Lawrence Jefferson</strong>{' '}
-            <br />
-            <small className="text-yellow-200">Chief Technology Officer of GunKustom.com </small>
+          <h1 className="text-5xl font-bold mb-2">
+            Hi! I’m <span className="text-yellow-300">Lawrence Jefferson II</span>
           </h1>
+          <p className="text-yellow-200 font-medium mb-6">
+            Chief Technology Officer of <a href="https://gunkustom.com" className="hover:underline text-yellow-300" target="_blank" rel="noopener noreferrer">GunKustom.com</a>
+          </p>
+
           <p className="text-yellow-100 mb-6">
-            I am{' '}
-            <a
-              href="https://www.linkedin.com/in/lawrence-jefferson-ii-46497075"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-yellow-300 hover:underline"
-            >
-              Lawrence Jefferson II
-            </a>
-            , also known as{' '}
+            Also known as{' '}
             <a
               href="https://github.com/MenokoOG"
               target="_blank"
               rel="noopener noreferrer"
               className="text-yellow-300 hover:underline"
             >
-              M3n0koOg - Original Geek !
-            </a> {''}
-            JavaScript and Python Fullstack Enthusiast !
+              M3n0koOg — Original Geek
+            </a>
+            . JavaScript & Python full-stack enthusiast.
           </p>
 
-          <br />
-          <br />
-          <h2 className="text-3xl font-bold mb-4">What I am up to:</h2>
-          <p className="text-yellow-100 mb-4">
-            Strategically leading the technology needs of GunKustom, coding a few projects and learning new technologies.
+          <h2 className="text-3xl font-bold mb-4">What I’m up to</h2>
+          <p className="text-yellow-100 mb-6">
+            Strategically leading the technology at GunKustom while actively building APIs, dashboards, and automation pipelines.
           </p>
-
 
           <div className="tech-stack mt-8">
-            <h2 className="text-2xl font-bold mb-4 tech-stack-title">My Tech Stack:</h2>
-            <IconContext.Provider value={{ size: '2rem', color: '#FFEB3B' }}>
+            <h3 className="text-2xl font-bold mb-4 tech-stack-title">My Tech Stack</h3>
+            <IconContext.Provider value={{ size: '2rem', color: '#FFEB3B', className: 'focus:outline-none' }}>
               <ul className="flex flex-wrap justify-center">
                 {techStack.map((tech, index) => (
                   <li key={index} className="tech-item mx-4 mb-4 flex flex-col items-center">
@@ -88,6 +80,7 @@ const Home = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline"
+                      aria-label={`Learn more about ${tech.name}`}
                     >
                       {tech.icon}
                     </a>

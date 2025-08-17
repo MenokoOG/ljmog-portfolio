@@ -1,137 +1,115 @@
-import { useRef, useState } from 'react';
-import { motion, useInView } from 'framer-motion';
-import emailjs from '@emailjs/browser';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { FiCopy, FiCheck, FiMail, FiGithub, FiLinkedin } from 'react-icons/fi';
 
-const variants = {
-  initial: {
-    y: 100,
-    opacity: 0,
-  },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.2,
-      staggerChildren: 0.1,
-    },
-  },
-};
+const EMAIL = 'Lawrence@gunkustom.com';
 
-const Contact = () => {
-  const ref = useRef();
-  const formRef = useRef();
+export default function ContactLite() {
+  const [copied, setCopied] = useState(false);
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const [error, setError] = useState(false);
-  const [success, setSuccess] = useState(false);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      // fallback: ignore silently
+    }
   };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        'service_pn0xlpb', // Replace with your EmailJS service ID
-        'template_mdeygdr', // Replace with your EmailJS template ID
-        formRef.current,
-        'mtjS0NCnxxctHuJCL' // Replace with your EmailJS public key
-      )
-      .then(
-        (result) => {
-          setSuccess(true);
-          setError(false);
-          console.log(result);
-
-          // Reset the form fields
-          setFormData({
-            name: '',
-            email: '',
-            message: '',
-          });
-        },
-        (error) => {
-          setError(true);
-          setSuccess(false);
-          console.log('Error sending email:', error);
-        }
-      );
-  };
-
-  const isInView = useInView(ref, { margin: '-100px' });
 
   return (
-    <section className="max-w-screen mx-auto p-4">
-      <hr className="border-t-2 border-gray-700 my-8 mx-auto w-11/12" />
+    <section
+      id="contact"
+      aria-labelledby="contact-heading"
+      className="bg-black bg-opacity-80 py-16 px-6 rounded-lg container mx-auto"
+    >
       <motion.div
-        ref={ref}
-        className="flex flex-col lg:flex-row justify-evenly items-center space-y-8 lg:space-y-0 lg:space-x-8 lg:px-20"
-        variants={variants}
-        initial="initial"
-        whileInView={isInView && 'animate'}
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: true, margin: '-100px' }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="text-center"
       >
-        <motion.div className="flex flex-col gap-4 lg:gap-8" variants={variants}>
-          <motion.h1 className="text-5xl font-bold text-gray-100 lg:text-7xl" variants={variants}>
-            Let&apos;s Work Together
-          </motion.h1>
-          <motion.div variants={variants} className="flex flex-col gap-2">
-            <h2 className="text-xl font-semibold text-gray-300">Mail</h2>
-            <span className="text-lg text-gray-400">jefftkddan@gmail.com</span>
-          </motion.div>
+        <h2
+          id="contact-heading"
+          className="text-4xl sm:text-5xl font-bold text-yellow-200 mb-4"
+        >
+          Let’s Work Together
+        </h2>
+        <p className="text-yellow-100 mb-8">
+          Lawrence Jefferson II · <span className="text-yellow-300">CTO</span> ·{' '}
+          <a
+            href="https://gunkustom.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-yellow-200"
+          >
+            GunKustom.com
+          </a>
+        </p>
+
+        {/* Email card */}
+        <motion.div
+          initial={{ scale: 0.95, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ delay: 0.1, duration: 0.45 }}
+          className="mx-auto max-w-lg rounded-xl border border-blue-400/40 bg-black p-6 shadow-lg"
+        >
+          <code className="block text-2xl font-semibold text-blue-300 mb-6">
+            {EMAIL}
+          </code>
+
+          <div className="flex justify-center gap-4">
+            <motion.button
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={copyEmail}
+              type="button"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500/20 transition"
+            >
+              {copied ? <FiCheck /> : <FiCopy />}
+              {copied ? 'Copied!' : 'Copy'}
+            </motion.button>
+
+            <motion.a
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              href={`mailto:${EMAIL}`}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500 text-black font-semibold hover:bg-blue-600 transition"
+            >
+              <FiMail />
+              Email Me
+            </motion.a>
+          </div>
         </motion.div>
 
-        <div className="w-full lg:w-1/2 relative">
-          <motion.form
-            ref={formRef}
-            onSubmit={sendEmail}
-            className="flex flex-col gap-4"
+        {/* Social links */}
+        <div className="mt-8 flex justify-center gap-6">
+          <a
+            href="https://github.com/MenokoOG"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500/20 transition"
+            title="GitHub: MenokoOG"
           >
-            <input
-              type="text"
-              name="name"
-              required
-              placeholder="Name"
-              value={formData.name}
-              onChange={handleChange}
-              className="p-3 bg-transparent border border-blue-300 text-blue-400 rounded-lg focus:outline-none"
-            />
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="Email"
-              value={formData.email}
-              onChange={handleChange}
-              className="p-3 bg-transparent border border-blue-300 text-blue-400 rounded-lg focus:outline-none"
-            />
-            <textarea
-              name="message"
-              rows="10"
-              placeholder="Message"
-              value={formData.message}
-              onChange={handleChange}
-              className="p-3 bg-transparent border border-blue-300 text-blue-400 rounded-lg focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="p-3 bg-blue-500 text-gray-900 font-semibold rounded-lg hover:bg-blue-600 transition"
-            >
-              Submit
-            </button>
-            {error && <p className="text-red-500">Error submitting message.</p>}
-            {success && <p className="text-green-500">Message sent successfully!</p>}
-          </motion.form>
+            <FiGithub className="h-6 w-6" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lawrence-jefferson-ii-46497075"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-lg border border-blue-400/40 text-blue-300 hover:bg-blue-500/20 transition"
+            title="LinkedIn: Lawrence Jefferson II"
+          >
+            <FiLinkedin className="h-6 w-6" />
+          </a>
         </div>
+
+        <p className="mt-6 text-sm text-yellow-100/70">
+          I read every message. If it’s urgent, click “Email Me”.
+        </p>
       </motion.div>
     </section>
   );
-};
-
-export default Contact;
+}
