@@ -13,15 +13,14 @@ const professionalProjects = [
     image: projectPowalert,
     title: 'PowAlert',
     description:
-      'I built and maintain the PowAlert backend server powering https://powalert.com — a real-time monitoring and alert platform. The server aggregates data streams, applies threshold-based rules, and issues push notifications via SMS, email, and webhooks.',
+      'I led the team effort to build the PowAlert backend server powering PowAlert, a real-time monitoring and alert platform. The server aggregates data streams, applies threshold-based rules, and issues push notifications via SMS, email, and webhooks.',
     stacks: [
       'Node.js',
-      'GraphQL',
+      'Express.js',
       'Redis',
       'MongoDB',
-      'TypeScript',
-      'Docker',
-      'AWS Lambda',
+      'React',
+      'React Native',
       'Twilio',
       'Jest',
     ],
@@ -32,7 +31,7 @@ const professionalProjects = [
     image: projectGunkustom,
     title: 'Gunkustom',
     description:
-      'As CTO and Principal Backend Developer of GunKustom, I architect a modular, scalable, and secure API for firearm customization. The platform enables users to manage parts, build configurations, and integrate vendor data via third-party services. Built with NestJS and MongoDB with strong auth, data normalization, and API design patterns.',
+      'As CTO and Principal Backend Developer of GunKustom, I architect a modular, scalable, and secure API for firearm customization. The platform enables users to manage parts, build configurations, and integrate vendor data via third-party services. Proprietary Technologies of GunKustom Stack: ArsenalEngine, StockPile, GunKustom, and GunKustom-Blog',
     stacks: [
       'NestJS',
       'MongoDB',
